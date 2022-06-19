@@ -1,32 +1,23 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view />
+  <div class="app-container p-3 bg-black m-auto">
+    <SongList></SongList>
   </div>
 </template>
 
+<script>
+  import SongList from "./components/songList.vue";
+  export default {
+    name: "App",
+    components: {
+      SongList,
+    },
+  };
+</script>
+
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+  .app-container {
+    width: 350px;
+    height: 850px;
   }
-}
+  
 </style>
